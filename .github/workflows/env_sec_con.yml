@@ -1,0 +1,14 @@
+jobs:
+  build:
+    environment: development
+    steps:
+      - name: Use Dev API Key
+        run: echo ${{ secrets.DEV_API_KEY }}
+
+  deploy:
+    environment: production
+    needs: build      # deploy runs after build job
+    if: github.ref == 'refs/heads/main' && success()  # only on main branch and successful build
+    steps:
+      - name: Use Prod API Key
+        run: echo ${{ secrets.PROD_API_KEY }}
