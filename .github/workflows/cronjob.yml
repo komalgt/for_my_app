@@ -13,6 +13,6 @@ jobs:
 
       - name: Run cleanup script
         run: |
-          echo "Running daily cleanup or report..."
+          echo "Running daily cleanup or report"
           # Example: Remove all files in /temp
           rm -f /temp/*
