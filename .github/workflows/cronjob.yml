@@ -2,7 +2,8 @@ name: Daily Cleanup my-app/tmp
 
 on:
   push:
-    branches: [main]
+    branches: 
+    - main
 jobs:
   daily-tmp-cleanup:
     runs-on: ubuntu-latest
@@ -13,6 +14,6 @@ jobs:
 
       - name: Remove all files in my-app/tmp
         run: |
-            rm -f ./tmp/*
+            rm -rf ./tmp/*
             echo "Daily cleanup: my-app/tmp files deleteddd."
           
