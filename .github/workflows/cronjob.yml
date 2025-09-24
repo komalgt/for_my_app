@@ -14,5 +14,5 @@ jobs:
       - name: Remove all files in my-app/tmp
         run: |
             rm -f ./tmp/*
-            echo "Daily cleanup: my-app/tmp files deleted."
+            echo "Daily cleanup: my-app/tmp files deleteddd."
           
