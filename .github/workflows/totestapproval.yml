@@ -1,15 +1,16 @@
-name: Node.js Matrix CI
+name: test approvals
 
 on:
   push:
-    branches: [ main ]
-      paths:
-    - "totestapproval.yml"
-      - ".github/workflows/totestapproval.yml"
-  pull_request:
-    branches: [ main ]
+    branches: [main]
     paths:
-    - "totestapproval.yml"
+      - "totestapproval.yml"
+      - ".github/workflows/totestapproval.yml"
+
+  pull_request:
+    branches: [main]
+    paths:
+      - "totestapproval.yml"
       - ".github/workflows/totestapproval.yml"
 
 jobs:
