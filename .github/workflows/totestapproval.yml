@@ -1,0 +1,26 @@
+name: Node.js Matrix CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install deps
+        run: npm install
+      - name: Run tests
+        run: npm test
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: manual_approval 
+    steps:
+      - name: Deploy
+        run: echo "Deploying application..."
