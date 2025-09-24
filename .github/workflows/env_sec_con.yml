@@ -1,3 +1,11 @@
+name: Example CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
 jobs:
   build:
     runs-on: ubuntu-latest
