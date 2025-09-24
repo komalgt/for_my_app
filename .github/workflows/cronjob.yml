@@ -3,7 +3,7 @@ name: Daily Cleanup or Report
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '30 1 * * *'
 
 jobs:
   daily-job:
