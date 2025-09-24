@@ -16,7 +16,7 @@ jobs:
         node-version: [16.x, 18.x, 20.x]
 
     steps:
-    - name: Checkout repository
+    - name: Checkout to repository
       uses: actions/checkout@v4
 
     - name: Use Node.js ${{ matrix.node-version }}
