@@ -1,18 +1,18 @@
-name: Daily My-App Tmp Cleanup
+name: Daily Tmp File Cleanup
 
 on:
- push:
-  workflow_dispatch:          # Allows manual triggering from GitHub UI
+push:
 
 jobs:
-  cleanup-tmp-files:
+  tmp-cleanup:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Cleanup tmp files in my-app
+      - name: Delete all files in tmp directory
         run: |
-          echo "Cleaning up tmp files in my-app/tmp..."
-          rm -f my-app/tmp/*
+          echo "Deleting files in ./tmp directory..."
+            rm -f ./tmp/*
+            echo "Tmp files deleted."          
