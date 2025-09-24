@@ -24,4 +24,4 @@ jobs:
       name: manual_approval 
     steps:
       - name: Deploy
-        run: echo "Deploying application..."
+        run: echo "Deploying application."
