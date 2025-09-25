@@ -1,10 +1,13 @@
-name: Matrix stratergy
+name: Matrix strategy
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
+    paths:
+      - "nodejs-matrix.yml"
+      - ".github/workflows/nodejs-matrix.yml"
 
 jobs:
   build:
@@ -16,16 +19,16 @@ jobs:
         node-version: [16.x, 18.x, 20.x]
 
     steps:
-    - name: Checkout to repository
-      uses: actions/checkout@v4
+      - name: Checkout to repository
+        uses: actions/checkout@v4
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Run app
-      run: node hello.js
+      - name: Run app
+        run: node hello.js
