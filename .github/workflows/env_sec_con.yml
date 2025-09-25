@@ -1,4 +1,4 @@
-name: Example CI/CD Workflow
+name: Example for dev/prod
 
 on:
   push:
