@@ -1,4 +1,4 @@
-name: Node.js Matrix CI
+name: Matrix stratergy
 
 on:
   push:
