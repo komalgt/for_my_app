@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: development
     steps:
-      - name: Use Dev API Key
+      - name: Use for Dev API Key
         run: echo ${{ secrets.DEV_API_KEY }}
 
   deploy:
@@ -23,6 +23,6 @@ jobs:
     needs: build
     if: github.ref == 'refs/heads/main' && success()
     steps:
-      - name: Use Prod API Key
+      - name: Use for Prod API Key
         run: echo ${{ secrets.PROD_API_KEY }}
 
