@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "env_sec_con.yml"
+      - ".github/workflows/env_sec_con.yml"
   pull_request:
 
 jobs:
@@ -22,3 +25,4 @@ jobs:
     steps:
       - name: Use Prod API Key
         run: echo ${{ secrets.PROD_API_KEY }}
+
